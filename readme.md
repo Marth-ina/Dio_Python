@@ -31,3 +31,39 @@ realizados na conta.
 "Não foram realizadas movimentações."
 - Os valores devem ser exibidos utilizando o formato R$ xxx.xx
 ```
+
+
+### Sistema bancário versão 2 : 
+
+Objetivo Geral
+Separar as funções existentes de saque, depósito e extrato em funções. Criar duas novas funções: Cadastrar usuário (cliente) e cadastrar conta bancária.
+
+Desafio
+Precisamos deixar nosso código mais modularizado, para isso vamos criar funções para as operações existentes: sacar, depositar e visualizar histórico. Além disso, para a versão 2 do nosso sistema precisamos criar duas novas funções: criar usuário (cliente do banco) e criar conta corrente (vincular com usuário)
+
+1- Pegar o código e separá-lo em funções - Sacar, Depositar e Extrato.
+Cada função vai ter uma regra na passagem de argumentos. O retorno e a forma como serão chamadas pode ser definida por você.
+
+```
+Saque:
+A função de saque deve receber os argumentos apenas por nome ( keyword only). Sugestão de argumentos: saldo, valor, extrato, limite, numero_saques, limite_saques. Sugestão de retorno: saldo e extrato.
+
+Depósito:
+A função depósito deve receber os argumentos apenas por posição (positional only). Sugestão de argumentos: saldo, valor, extrato. Sugestão de retorno: saldo e extrato.
+
+Extrato:
+A função extrato deve receber os argumentos por posição e nome ( positional e keyword). Argumentos posicionais: saldo, argumentos nomeados: extrato.
+```
+
+2- Criar duas novas funções - Criar usuário e Criar conta corrente e vincular com o usuário.
+
+```
+Criar usuário ( Cliente) 
+O programa deve armazenar os usuários em uma lista, um usuário é composto por: nome, data de nascimento, cpf e endereço. O endereço é uma string com o formato: logradouro, nro - bairro - cidade/sigla estado. Deve ser armazenado somente os números do cpf. Não podemos cadastrar 2 usuários com o mesmo cpf.
+
+Criar conta corrente
+O programa deve armazenar contas em uma lista, uma conta é composta por: agência, número da conta e usuário. O número da conta é sequencial, iniciando em 1. O número da agência é fixo “0001”. O usuário pode ter mais de uma conta, mas uma conta pertece somente a um usuário.
+
+Dica
+Para vincular um usuário a uma conta, filtre a lista de usuários buscando o número do cpf informado para cada usuário da lista.
+```
